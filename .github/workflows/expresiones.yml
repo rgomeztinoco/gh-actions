@@ -16,6 +16,7 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node_version }}
-
     - name: checks node version
       run: node --version
+    - name: Checks OS
+      run: echo ${{ runner.os }}
