@@ -1,5 +1,5 @@
 name: Triggers
-on: [issues, issue_comment]
+on: [issues, issue_comment, pull_request]
 jobs:
   test-job:
     name: Test Job
