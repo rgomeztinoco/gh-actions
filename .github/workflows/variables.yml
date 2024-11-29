@@ -1,0 +1,15 @@
+name: Usando variables
+on: pull_request
+env:
+  WEEK_DAY: lunes
+jobs:
+  variables:
+    name: Using variables
+    runs-on: ubuntu-latest
+    env:
+      MONTH: marzo
+    steps:
+      - name: Print date
+        run: echo "Hoy es $WEEK_DAY, $DAY de $MONTH"
+        env:
+          DAY: 20

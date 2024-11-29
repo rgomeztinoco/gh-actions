@@ -1,0 +1,14 @@
+name: Triggers
+on: [issues, issue_comment, pull_request]
+jobs:
+  test-job:
+    name: Test Job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+    - name: Run fake test
+      run: echo 'runing tests'
+            
